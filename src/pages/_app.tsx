@@ -2,7 +2,8 @@ import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import NextApp, { AppContext } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import Nav from "../components/@core/nav";
+
+import '@styles/global.scss';
 
 class App extends NextApp {
     render() {
@@ -13,7 +14,6 @@ class App extends NextApp {
                 <Head>
                     <link rel="shortcut icon" href="/favicon.ico" />
                 </Head>
-                <Nav />
                 <Component {...pageProps} />
             </ThemeProvider>
         );
